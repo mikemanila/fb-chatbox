@@ -1,0 +1,504 @@
+/* 
+// DJ Mike CSS
+// ChatBox - Style Sheet
+// Coded by Mike
+// cr8tivemanila.com
+*/
+
+@import url("fonts.css");
+@import url("rainbow.css");
+@import url("staff-vip.css");
+html, body {
+	height: 100%;	
+}
+
+body {
+	font-family: Arial, Tahoma, Geneva, sans-serif;
+	margin: 0 auto;
+	padding: 0;
+}
+table, tr, td {
+border: none;
+}
+
+div#scGFX-chat {
+	height: 100%;
+	margin: 0 auto;
+}
+
+div#scGFX-composer {
+	position: absolute;
+	width: 100%;
+	height: 75px;
+	padding-bottom: 5px;
+	z-index: 95;
+}
+
+div.composer-wrapper {
+	width: 100%;
+	height: 92%;
+	padding-bottom: 5px;
+	background: #cdcdcd;
+	border-bottom: 3px solid #050505;
+}
+span.smlys {
+	height: 50px;
+}
+a.composer-user-pic {
+	float: left;
+	margin-left: 7px;
+	margin-top: 7px;
+	padding: 4px;
+	border: 1px solid #8e8e8e;
+	background: #acacac;
+}
+
+div.composer-input {
+	padding-left: 70px;
+	padding-right: 20px;
+}
+
+div.composer-input div.composer-text {
+	padding-left: 5px;
+	padding-top: 7px;
+}
+
+div.composer-input div.composer-submit {
+	float: right;
+}
+
+div.composer-buttons {
+	float: left;
+	margin-top: 5px;
+}
+
+input.composer-text {
+	width: 100%;
+	height: 20px;
+	color: #1d1d1d;
+	outline: none;
+	padding: 5px;
+	text-shadow: 1px 1px 0 #fff;
+	border: 1px solid #bcbcbc;
+	border-radius: 3px;
+	background: #ececec;
+}
+
+input.composer-submit {
+	background: #046fad;
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #1d1d1d;
+	cursor: pointer;
+}
+input.send-butt {
+	background: #0084d0;
+	background-image: -webkit-linear-gradient(top, #0084d0, #0070ad);
+	background-image: -moz-linear-gradient(top, #0084d0, #0070ad);
+	background-image: -ms-linear-gradient(top, #0084d0, #0070ad);
+	background-image: -o-linear-gradient(top, #0084d0, #0070ad);
+	background-image: linear-gradient(to bottom, #0084d0, #0070ad);
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	text-shadow: 1px 1px 0px #0075b0;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 12px;
+	float: right;
+	padding: 5px 7px 5px 7px;
+	border: solid #c3c3c3 1px;
+	text-decoration: none;
+	cursor: pointer;
+	margin-right: -13px;
+	margin-top: 2px;
+}
+input.butt {
+	background: #f7f7f7;
+	background-image: -webkit-linear-gradient(top, #f7f7f7, #e6e6e6);
+	background-image: -moz-linear-gradient(top, #f7f7f7, #e6e6e6);
+	background-image: -ms-linear-gradient(top, #f7f7f7, #e6e6e6);
+	background-image: -o-linear-gradient(top, #f7f7f7, #e6e6e6);
+	background-image: linear-gradient(to bottom, #f7f7f7, #e6e6e6);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	text-shadow: 1px 1px 0px #ffffff;
+	font-family: Arial;
+	color: #7a7a7a;
+	font-size: 12px;
+	padding: 5px 7px 5px 7px;
+	border: solid #c3c3c3 1px;
+	text-decoration: none;
+	cursor: pointer;
+	margin-top: -3px;
+}
+input.smile-butt:active {
+	background: #f5f5f5;
+}
+
+input.composer-submit2 {
+	background: #002d47;
+	background: -webkit-gradient( linear, left bottom, left top, color-stop(0.12, #00466e), color-stop(1, #002d47) );
+	background: -moz-linear-gradient( center bottom, #00466e 12%, #002d47 100% );
+	color: #fff;
+    margin-top: -2px;
+	font-weight: bold;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	border: none;
+	cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 25px;
+	margin-left: 5px;
+}
+
+input.composer-submit3 {
+	background: #046fad;
+	border: 1px solid #035889;
+	color: #fff;
+	margin-top: 3px;
+	margin-right: -11px;
+	font-size: 11px;
+	cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+	height: 25px;
+    line-height: 25px;
+}
+input.composer-submit3:active {
+	-moz-box-shadow: inset 0 0 10px #024267;
+	-webkit-box-shadow: inset 0 0 10px #024267;
+	box-shadow: inset 0 0 10px #024267;
+}
+div.cb-reply {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	cursor: pointer;
+	z-index: 999;
+}
+div.cb-reply-blank {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	z-index: 999;
+}
+div.cb-reply:hover {
+	background: url(img/cbox/reply.png) no-repeat;
+	-moz-transition: all 0.3s linear;
+   -webkit-transition: all 0.3s linear;
+   -o-transition: all 0.3s linear;
+   transition: all 0.3s linear;
+   z-index: 999;
+}
+/** NEW CBOX STYLE **/
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #046fad;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+table.mgGfx-cBox {
+	width: 100%;
+	word-wrap: break-word;
+	border: none;
+}
+table {
+	border-collapse:collapse;
+	border: none;
+	margin-bottom: 8px;
+}
+div.cb-global {
+	position: relative;
+	width: 99%;
+	word-wrap:break-word;
+	height: 23px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	background: #050505;
+	border-bottom: 1px solid #050505;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-size: 14px;
+	text-align: center;
+	display: block;
+}
+div.cb-global-type {
+	font-size: 22px;
+	font-family: bebas_neueregular;
+	color: #fff;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+	margin-top: -2px;
+	margin-right: 3px;
+	text-align: center;
+}
+div.cb-global-box {
+	width: 99%;
+	background: #191919;
+	padding: 7px 5px;
+	border-top: 1px solid #212121;
+	border-bottom: 3px solid #050505;
+	font-size: 12px;
+	text-align: center;
+	color: #c4c4c4;
+	box-shadow: 0 10px 10px -5px #090909;
+}
+div.cb-message-box {
+	width: 97%;
+	background: #191919;
+	padding: 7px 5px;
+	border-top: 1px solid #212121;
+	border-bottom: 3px solid #050505;
+	font-size: 14px;
+	color: #c4c4c4;
+	box-shadow: 0 10px 10px -5px #090909;
+}
+div.cb-time-rank {
+	position: relative;
+	width: auto;
+	color: #5f5f5f;
+	margin-top: 8px;
+	font-size: 9px;
+	text-transform: uppercase;
+	float: left;
+}	
+div.cb-name {
+	font-size: 22px;
+	font-family: bebas_neueregular;
+	color: #fff;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+	float: left;
+	margin-top: -2px;
+	margin-right: 3px;
+}
+div.clear {
+	clear: both;
+}
+div.cb-position {
+	position: relative;
+    width: auto;
+	color: #5f5f5f;
+	margin-top: 8px;
+	font-size: 9px;
+	text-transform: uppercase;
+	float: left;
+}
+div.ban {
+	width: 20px;
+	height: 20px;
+	background: url(img/cbox/ban.png) no-repeat;
+	float: left;
+	margin-left: 3px;
+	cursor: pointer;
+}
+div.warn {
+	width: 20px;
+	height: 20px;
+	background: url(img/cbox/warn.png) no-repeat;
+	float: left;
+	margin-left: 3px;
+	cursor: pointer;
+}
+div.male-gender {
+	width: 20px;
+	height: 20px;
+	background: url(img/cbox/male.png) no-repeat;
+	float: left;
+	margin-left: 3px;
+}
+div.female-gender {
+	width: 20px;
+	height: 20px;
+	background: url(img/cbox/female.png) no-repeat;
+	float: left;
+	margin-left: 3px;
+}
+div.cb-avabg {
+	float: left;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	display: block;
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+}
+img.cb-avabg {
+	width: 50px;
+	height: 50px;
+	z-index: 99;
+	margin-top: -50px;
+}
+div.cb-info {
+	position: relative;
+	width: 97%;
+	word-wrap:break-word;
+	height: 23px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	background: #050505;
+	border-bottom: 1px solid #050505;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+	font-size: 14px;
+	display: block;
+}
+div.cb-info:after {
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: -6px;
+	border-style: solid;
+	border-width: 8px 8px 8px 0;
+	border-color: transparent #050505;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+div.cb-info:before {
+	content: "";
+	position: absolute;
+	left: -9px;
+	display: block;
+	width: 0;
+	z-index: 0;
+}
+div.cb-rankholder {
+	width: 26px;
+	height: 7px;
+	float: left;
+	margin-left: 3px;
+	margin-top: 10px;
+}
+.holder{        
+    width:100%;
+    display:block;
+}
+.srViewer {
+    width:280px;
+    border-radius: 10px 10px 10px 10px; 
+	-moz-border-radius: 10px 10px 10px 10px; 
+	-webkit-border-radius: 10px 10px 10px 10px; 
+    background:#808080;
+    margin:30px auto 0;
+    padding:15px;
+    position:absolute;
+    left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: 125px; /* This should be half of the total height of your div */
+}
+/** END OF NEW CBOX STYLE **/
+.buttons {
+	width: auto;
+	height: 20px;
+	background: grey;
+}
+input#fbconnect {
+	padding: 30px 50px;
+	width: 100%;
+}
+
+div.fbc {
+	text-align: center;
+}
+
+div#scGFX-container {
+	height: 100%;
+	width: 100%;
+}
+
+.chat-wrapper {
+	width: 100%;
+    height: 100%;
+	float: left;
+	margin-top: 90px;
+	overflow-x: hidden;
+	overflow-y: visible;
+	clear: both;
+	margin-bottom: 10px;
+
+}
+.position {
+	color: #c9c9c9;
+	line-height: 20px;
+	float: left;
+}
+.pos-vip-11 a {
+	-webkit-animation: colorRotate 6s linear 0s infinite;
+	-moz-animation: colorRotate 6s linear 0s infinite;
+	-o-animation: colorRotate 6s linear 0s infinite;
+	animation: colorRotate 6s linear 0s infinite;
+	background: url(img/cbox/linkback.gif) repeat;
+}
+img.vipimg {
+	height: 25px;
+}
+img.smlys {
+	height: 35px;
+}
+
+div.smiley-wrapper {
+	position: absolute;
+	margin-top: 4px;
+	width: 60%;
+	height: auto;
+	background: #cccccc;
+	border-radius: 3px 3px 3px 3px; 
+	-moz-border-radius: 3px 3px 3px 3px; 
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-top: 2px solid #cccccc;
+	padding: 10px;
+	z-index: 9999;
+	display: none;
+	margin-left: 5px;
+}
+
+div.smiley-wrapper img {
+	cursor: pointer;
+}
+
+div.smiley-wrapper img:hover {
+	opacity: 0.3;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+	margin-right: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(5,90,170,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 20px;
+    border-radius: 2px;
+    background: #0078ff; 
+    -webkit-box-shadow: inset 0 0 6px #333); 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #111111; 
+}
