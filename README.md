@@ -9,7 +9,7 @@ class Pages extends CI_Controller {
 
 	public function view($page = 'home')
 	{
-
+        	$this->load->view('pages/'.$page); //this enables you to view the page: /index.php/pages/view/home      
 	}
 }
 
@@ -27,3 +27,33 @@ Now you've created your first method, it's time to make some basic page template
 <strong>&copy; 2011</strong>
 <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-5.newrelic.com","eb488e72a1","3758250","NgEEZBYHDUFWVk0KWg9LJUUXEgxfGFZWB1AIAwhZEAMRHR0=",0,101,new Date().getTime(),"","","","",""]);</script></body>
 </html>
+
+4) Now modify the pages.php controller:
+public function view($page = 'home')
+{
+
+	if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
+	{
+		// Whoops, we don't have a page for that!
+		show_404();
+	}
+
+	$data['title'] = ucfirst($page); // Capitalize the first letter
+
+	$this->load->view('templates/header', $data);
+	$this->load->view('pages/'.$page, $data);
+	$this->load->view('templates/footer', $data);
+
+}
+
+++++++++++++++
+Database
+4) Create application/models/news_model.php
+<?php
+class News_model extends CI_Model {
+
+	public function __construct()
+	{
+		$this->load->database();
+	}
+}
