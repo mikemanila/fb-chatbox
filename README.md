@@ -1,3 +1,5 @@
+Description: This is a PHP Web application that allows users to chat using emoticons and text but has the capability to authenticate each users through fb-connect fetching their fb profile details as well.
+
 Anatomy of a bare PHP webapp integrated with fb-connect
 
 1) Create chatigniter/application/controllers/pages.php -> this will be your controller for a static page
