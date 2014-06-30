@@ -47,6 +47,7 @@ public function view($page = 'home')
 }
 
 ++++++++++++++
+<br>
 Database
 4) Create application/models/news_model.php
 <?php
@@ -56,4 +57,64 @@ class News_model extends CI_Model {
 	{
 		$this->load->database();
 	}
+	public function get_news($slug = FALSE) {
+	if ($slug === FALSE)
+	{
+		$query = $this->db->get('news');
+		return $query->result_array();
+	}
+
+	$query = $this->db->get_where('news', array('slug' => $slug));
+	return $query->row_array();
+	}
 }
+
+5) application/controllers/news.php
+<?php
+class News extends CI_Controller {
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('news_model');
+	}
+
+	public function index()
+	{
+		$data['news'] = $this->news_model->get_news();
+		$data['title'] = 'News archive';
+	
+		$this->load->view('templates/header', $data);
+		$this->load->view('news/index', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function view($slug)
+	{
+		$data['news_item'] = $this->news_model->get_news($slug);
+	
+		if (empty($data['news_item']))
+		{
+			show_404();
+		}
+	
+		$data['title'] = $data['news_item']['title'];
+	
+		$this->load->view('templates/header', $data);
+		$this->load->view('news/view', $data);
+		$this->load->view('templates/footer');
+	}
+
+}
+
+6) application/views/news/index.php
+<?php foreach ($news as $news_item): ?>
+
+    <h2><?php echo $news_item['title'] ?></h2>
+    <div class="main">
+        <?php echo $news_item['text'] ?>
+    </div>
+    <p><a href="news/<?php echo $news_item['slug'] ?>">View article</a></p>
+
+<?php endforeach ?>
+
